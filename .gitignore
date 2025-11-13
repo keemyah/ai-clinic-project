@@ -1,0 +1,10 @@
+# Ignorer les fichiers sensibles
+src/credentials.py
+
+# Ignorer l'environnement virtuel
+.venv/
+
+# Ignorer les données brutes et temporaires
+src/data/raw/
+src/data/processed/
+__pycache__/
