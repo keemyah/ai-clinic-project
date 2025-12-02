@@ -76,7 +76,8 @@ class MistralSearchV2:
                 "hypothesis": "SIMULATION - Hypothèse de test",
                 "keywords": ["test", "simulation"],
                 "legal_domain": "général",
-                "context": "Mode debug"
+                "context": "Mode debug",
+                "serach_scope" : "code_seul"
             }
 
         system_msg = """Tu es un expert juridique français. Analyse la question et génère:
@@ -84,6 +85,7 @@ class MistralSearchV2:
 2. **keywords**: 4-10 mots-clés techniques pour la recherche
 3. **legal_domain**: Domaine parmi [fiscal, civil, pénal, travail, commercial, route, propriété intellectuelle, environnement, général]
 4. **context**: Contexte factuel extract (max 70 mots)
+5. **search_scope**: Recommande le périmètre de recherche : 'code_seul' (si la réponse est probablement dans le code), 'code_et_affiliés' (si décrets, arrêtés, ou lois non codifiées sont nécessaires), ou 'jurisprudence_et_code' (si l'interprétation par les tribunaux est clé).
 
 Réponds en JSON strict avec ces clés."""
 
