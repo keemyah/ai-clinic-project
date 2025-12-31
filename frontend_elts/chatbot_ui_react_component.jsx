@@ -694,7 +694,9 @@ const exportToPDF = () => {
                     </div>
 
                     <div className="flex gap-3">
-                        <button className="flex-1 py-3 rounded-xl bg-[#4F46E5] hover:bg-[#4338ca] text-white text-sm font-semibold shadow-sm transition-colors">
+                        <button 
+                        onClick={exportToPDF}
+                        className="flex-1 py-3 rounded-xl bg-[#4F46E5] hover:bg-[#4338ca] text-white text-sm font-semibold shadow-sm transition-colors">
                             Exporter
                         </button>
                         <button className="py-3 px-6 rounded-xl bg-white border border-slate-200 text-[#0F1F53] text-sm font-semibold hover:bg-slate-50 hover:border-slate-300 transition-colors">
